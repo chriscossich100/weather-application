@@ -1,0 +1,20 @@
+.todayContent{
+    display: flex;
+    background-color: lightskyblue;
+    /* flex-flow: column; */
+    
+    justify-content: center;
+    
+}
+
+
+.weatherContent{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#7ba5d9),to(#cecece));
+    display: block;
+    padding: 15px;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+}
+
+.weatherContent p{}

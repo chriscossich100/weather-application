@@ -1,0 +1,157 @@
+.rnHourlyWeather{
+    background-color: #f5f5f5;
+    /* background-color: #7ba5d9; */
+   
+    padding: 20px;
+    display: none; 
+    flex-flow: column;
+}
+
+
+.rnHourlyWeather h1{
+    /* background-color: chocolate; */
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.asofPHourly{
+    /* background-color: chartreuse; */
+    margin-top: 5px;;
+    font-size: .875rem;
+    opacity: .65;
+}
+
+
+.rnDate h3{
+    /* background-color: cadetblue; */
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    letter-spacing: .9px;
+}
+
+
+.rnWeatherInfo{
+    /* background-color: brown; */
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+.rnWeatherInfo .timeHour{
+    font-weight: 400;
+    font-size: .875rem!important;
+}
+
+.rnWeatherInfo .tempo{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rnWeatherInfo p{
+    margin: 5px 0;
+
+}
+
+
+.rnWeatherInfo:hover{
+    background-color: lightgray;
+    
+}
+
+.rnWeatherInfo p svg{
+    width: 20px;
+    height: 20px;;
+}
+
+.rainChecker2{
+    width:10%;
+}
+
+.rnMain{
+    /* background-color: blueviolet; */
+    line-height: 1.15;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+
+.rnOtherDiv{
+    border-bottom: 1px solid #dedede!important;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.rnOtherInfo{
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    border: 2px solid #dedede;
+    border-radius: 6px;
+}
+
+.rnOtherInfo1{
+    display: flex;
+    /* background-color: cornsilk; */
+    flex-basis: 50%;
+    padding-bottom: 5px;
+    flex-flow: column;
+    border-bottom: 1px solid #dedede!important;
+}
+
+.rnOtherInfo2{
+    display: flex;
+    /* background-color: crimson; */
+    flex-basis: 50%;
+    padding-bottom: 5px;
+    flex-flow: column;
+    border-bottom: 1px solid #dedede!important;
+}
+
+.rnOtherInfo1 span, .rnOtherInfo2 span, .rnOtherInfo3 span,
+.rnOtherInfo4 span{
+    font-size: .8125rem;
+}
+
+.rnOtherInfo1 p, .rnOtherInfo2 p, .rnOtherInfo3 p,
+.rnOtherInfo4 p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+.rnOtherInfo3, .rnOtherInfo4{
+    display: flex;
+    margin-top: 10px;
+    /* background-color: crimson; */
+    flex-basis: 50%;
+    padding-bottom: 5px;
+    flex-flow: column;
+}
+
+
+
+
+@media (min-width: 769px){
+    .rnHourlyWeather{
+        background-color: #f5f5f5;
+        /* background-color: #7ba5d9; */
+        width: 729px;
+        margin: 60px auto;
+        padding: 20px;
+        display: none; 
+        flex-flow: column;
+        border-radius: 5px;
+    }
+
+
+    .rnOtherInfo{
+        margin-bottom: 15px;
+    }
+}

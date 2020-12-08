@@ -1,0 +1,254 @@
+.rnDailyWeather{
+    background-color: #f5f5f5;
+    /* background-color: #7ba5d9; */
+    padding: 10px;
+    display: none; 
+    flex-flow: column;
+}
+
+.rnDailyWeather h1{
+    /* background-color: chocolate; */
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding-left: 10px;
+}
+
+
+.asofPHourly{
+    /* background-color: chartreuse; */
+    margin-top: 5px;;
+    font-size: .875rem;
+    opacity: .65;
+    padding-left: 10px;
+}
+
+
+.eachDayDiv{
+    display: flex;
+    flex-flow: wrap;
+    border-bottom: 2px solid #dedede!important;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.rnWeatherInfo{
+    /* background-color: brown; */
+    display: flex;
+    flex-basis: 90%;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+.rnWeatherInfo .timeHour{
+    font-weight: 400;
+    font-size: .875rem!important;
+}
+
+.rnWeatherInfo .tempo{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.rnWeatherInfo p{
+    margin: 5px 0;
+
+}
+
+
+.rnWeatherInfo p svg{
+    width: 20px;
+    height: 20px;;
+}
+
+.rainChecker2{
+    width:10%;
+}
+
+
+.toggleInfo{
+    /* background-color: lightgreen; */
+    flex-basis: 10%;
+    text-align: center;
+}
+
+
+.toggleInfo svg{
+    width: 10px;
+}
+
+
+.childInfo{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    /* background-color: lightgreen; */
+}
+
+.childInfo h3{
+    margin: 30px 0 16px;
+    font-size: .875rem;
+    line-height: 1em;
+    font-weight: 400;
+    min-height: 1em;
+
+}
+
+.childInfo span{
+    font-weight: 600;
+}
+
+.dayInfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    /* background-color: lightpink; */
+}
+
+.DayTempDiv{
+    /* background-color: lightseagreen; */
+    width: 70px;
+}
+
+.DayTemp{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.svgIcon{
+    width: 48px;
+    height: auto;;
+    padding-left: 10px!important;
+
+
+}
+
+.rainCheck{
+    width: 40px;
+    height: auto;
+    padding-bottom: 10px !important;
+}
+
+.rainChecker{
+    width: 40px;
+    height: auto;
+}
+
+.rainChecker2{
+    width:10%;
+}
+
+
+.rainNwind{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    
+    
+}
+
+.rainNwind p{
+    margin: 0;
+    margin-left: 65px;
+}
+
+.rainPercSvg{
+    padding-top: 10px;
+}
+.rainPercSvg span{
+    line-height: 1.2;
+    
+}
+
+.rainNwind p span{
+    font-weight: 0;
+    margin: 0;
+    padding-left: 5px;;
+}
+
+
+.rainChecker2{
+    width:12px;
+}
+
+.windChecker{
+    width: 18px!important;
+    height: 18px!important;
+    fill: #1b4de4;
+    /* margin-left: 35px; */
+    color: #1b4de4;
+}
+
+.extraDayInfo{
+    border: 1px solid #dedede!important;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.extra1, .extra2{
+    
+    display: flex;
+    flex-basis: 50%;
+    /* background-color: lightskyblue; */
+    flex-flow: column;
+    padding-bottom: 5px;;
+    align-content: flex-start;
+    border-bottom: 1px solid #dedede!important;
+}
+
+.extra3, .extra4{
+    
+    display: flex;
+    flex-basis: 50%;
+    /* background-color: lightskyblue; */
+    flex-flow: column;
+    padding-top: 15px;;
+    align-content: flex-start;
+
+}
+
+.extra1 svg, .extra2 svg, .extra3 svg, .extra4 svg{
+    
+    width: 18px;
+    height: auto;
+    fill: #1b4de4;
+    color: #1b4de4;
+    
+    display: inline-block;
+}
+
+.humidityP, .uvIndex{
+    margin: 0;
+    font-size: .8125rem;
+    line-height: 1.2;
+}
+
+.humidity, .uv{
+    display: block;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    margin-left: 18px;
+}
+
+
+
+@media (min-width: 769px){
+
+    .rnDailyWeather{
+        background-color: #f5f5f5;
+        /* background-color: #7ba5d9; */
+        padding: 20px;
+        width: 729px;
+        margin: 60px auto;
+        display: none; 
+        flex-flow: column;
+        border-radius: 5px;
+    }
+}

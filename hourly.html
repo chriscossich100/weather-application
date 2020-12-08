@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cossich Weather App</title>
+    <link rel = "stylesheet" href = "weather.css">
+    <link rel = "stylesheet" href = "hourly.css">
+</head>
+<body>
+
+
+    <div class = "sideMenu">
+          
+    </div>
+
+    <div class = "sideMenuActive">
+
+        <div class = "xButton">
+            <p id = "closeX">X</p>
+        </div>
+        <div class = "sideMenuActiveDiv">
+           <div class = "unitChangeMobile">
+                <div><span id = "celsius1">°C</span><span> |</span><span id = "fahrenheit1"> °F</span></div>
+                <div id = "add"><span>Add City</span></div>
+                <div id = "remove"><span>Remove City</span></div>
+            </div>
+            <header>
+                <h5>Your Saved Cities Go Here</h5>
+            </header>
+            <ul class = "savedCitiesSideMenu"></ul>
+        </div>
+        
+    </div> 
+
+    <header class =  "mainHeader">
+
+        <div class = "mainHeaderContent">
+            <div class = "appName"><a href = "home.html" class = "weatherAppName">Weather App</a></div>
+
+
+            <div id = "searchCity" class = "searchFeature"> 
+                <form action = "weatherapp.html" id = "fromHourly" >
+                <input id = "cityIdGetterFromHourly" class = "inputCity" name = "searchedCity" type = "text" placeholder="SEARCH CITY HERE"/>
+                <input id = "submitIt" style = "display: none;" type = "submit"/>  
+                </form>
+            </div>
+
+            <div class = "hamburgericon_and_unitChange">
+                <!-- <div class = "unitChange">
+                    <span id = "celsius">°C</span><span> |</span><span id = "fahrenheit"> °F</span>
+                </div> -->
+
+                <div class = "hamburger">
+                    <svg (click) = "toggleMenu()" class="hamburger-icon" id="Menu_Burger_Icon" data-name="Menu Burger Icon" viewBox="31.5 30 49.9 32">
+                        <defs>
+                        <style>.hamburger__icon__fill { fill: #ffff }</style>
+                        </defs>
+                        <rect id="Rectangle_9" width="49.9" height="4" [ngClass] = "{'hamburger-icon-dark': darkModeActive}" class="hamburger__icon__fill" data-name="Rectangle 9" rx="2" transform="translate(31.5 58)"/>
+                        <rect id="Rectangle_10" width="49.9" height="4" [ngClass] = "{'hamburger-icon-dark': darkModeActive}" class="hamburger__icon__fill" data-name="Rectangle 10" rx="2" transform="translate(31.5 44)"/>
+                        <rect id="Rectangle_11" width="49.9" height="4" [ngClass] = "{'hamburger-icon-dark': darkModeActive}" class="hamburger__icon__fill" data-name="Rectangle 11" rx="2" transform="translate(31.5 30)"/>
+                    </svg>
+                </div>
+                
+            </div>
+        </div>  
+
+        <div class = "quickNav">
+            <nav>
+                <div class = "forecastLinks">
+                    <a href = "weatherapp.html">Today</a>
+                    <a href = "hourly.html">Hourly</a>
+                    <a href = "daily.html">7 Day</a>
+                </div>
+            </nav>
+        </div>      
+
+    </header>
+
+    <div class = "errorMessage" style = " margin-top: 60px; text-align: center; color: rgb(114, 14, 14); display: none;">
+        <p style = "font-size: 20px;">the city you enterd was not valid.</p>
+    </div>
+
+
+    <div class = "rnHourlyWeather">
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src = "jquery-1.11.3.min.js"></script>
+    <script src = "weather.js"></script>
+    <script src = "hourly.js"></script>
+</body>
+</html>
