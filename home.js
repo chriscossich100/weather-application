@@ -34,7 +34,7 @@ $(function(){
 
     function getLocation(){
         var date = new Date();
-        const apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
+        const apiKey = "your api key goes here";
         $.get(`https://api.openweathermap.org/data/2.5/weather?q=Leesburg&units=${unitOfMeasurement}&appid=${apiKey}`, function(data, status){
             console.log(data);
             console.log(data.main.temp_max + ',' + data.main.temp_min);

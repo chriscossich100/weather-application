@@ -3,7 +3,7 @@ $(function(){
     
 
     let hourlyCity;
-    let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
+    let apiKey = "Your Api Key Goes Here";
     let long;
     let lat; 
     let unitOfMeasurement;

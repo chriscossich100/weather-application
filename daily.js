@@ -2,7 +2,7 @@
 
 $(function(){
     let dailyCity;
-    let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
+    let apiKey = "your api key goes here";
     let long;
     let lat; 
     let unitOfMeasurement;
