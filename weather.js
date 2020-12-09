@@ -2,7 +2,6 @@
 
 $(function(){
 
-
     $('#celsius').css('color', 'cyan');
 
     let unitOfMeasurement;
@@ -34,24 +33,18 @@ $(function(){
     let addorremoveError = false;
 
     if("cityName" in localStorage){
-        console.log("the cities names are: " + window.localStorage.getItem('cityName'));
         var characters = JSON.parse(window.localStorage.getItem('cityName'));
-        console.log('line 97\'s value is: ' + characters);
         var cities = []
         for(i = 0; i < characters.length; i++){
             cities.push(characters[i]);
             
         }
-        console.log('the cities that are stored already are: ' + cities);
-        // console.log("the cities stored in the local storage are: " + window.localStorage.getItem('cityName'));
     }
     else{
         var cities = []; 
-        console.log("the cities stored are: " + window.localStorage.getItem('cityName'));
     }
     
     date = new Date();
-    console.log(weatherDataContentText);
 
 
     $('#jameson').on('submit', getWeatherInfo);
@@ -59,7 +52,6 @@ $(function(){
 
 
     if(window.localStorage.getItem('searchedCity')){
-        console.log('we do get here by the way');
         getWeatherInfo();
     }
 
@@ -68,33 +60,19 @@ $(function(){
 
 
         if(window.localStorage.getItem('searchedCity') && !$('#cityIdGetter').val()){
-            console.log('hoorah it matches b');
             city = window.localStorage.getItem('searchedCity');
-            console.log(inputedCity);
         }
         else{
             city = $('#cityIdGetter').val();
-            // city = window.localStorage.setItem('searchedCity' , city);
             
         }
-        
-        /* This is a shorthand Ajax function, which is equivalent to: REMEMBER THAT THE DEFAULT TYPE IS GET.
-                $.ajax({
-                url: url,
-                data: data,
-                success: success, //success handles the responces. so it could look like this: success: function(result){...}
-                dataType: dataType
-                });
-        */
+
 
         $.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unitOfMeasurement}&appid=${apiKey}`, function(data, status){
             
-        
-            // $('.quickNav').hide().slideDown();;
-            // $('#hourlyHolder').css('display', 'block');
+
                 
             console.log(data);
-            console.log(data.main.temp_max + ',' + data.main.temp_min);
 
             start += '<div class = "weatherDataDiv"><h1 class = "cityName">' + data.name + '</h1>';
                 var characterDate = date.toDateString();
@@ -134,18 +112,13 @@ $(function(){
                                 start += '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill = "#3b79a6" d="M21.75 19.25c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm-4 0c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm-4 0c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm-4 0c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm2 2.5c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm4.094 0c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm3.906 0c0 .689-.559 1.25-1.25 1.25s-1.25-.561-1.25-1.25.559-1.25 1.25-1.25 1.25.561 1.25 1.25zm4.25-9.028c0 2.362-1.949 4.278-4.355 4.278h-10.291c-1.55 0-2.902-.802-3.674-2h-1.326c-2.405 0-4.354-1.916-4.354-4.278 0-2.101 1.545-3.847 3.578-4.206.168-3.073 2.75-5.516 5.922-5.516 1.797 0 3.403.785 4.49 2.024 3.4-.286 6.254 2.259 6.432 5.491 2.033.36 3.578 2.106 3.578 4.207zm-12.21-9.077c-.576-.395-1.323-.645-2.29-.645-3.875 0-4.062 3.854-4.012 5.209-1.384-.084-3.488.395-3.488 2.513 0 1.257 1.057 2.278 2.354 2.278h.674c-.146-2.357 1.528-4.127 3.551-4.484.115-2.126 1.388-3.95 3.211-4.871zm3.711 6.855l1.499-.881-.521-.867-1.479.881v-1.633h-1v1.633l-1.494-.896-.506.867 1.499.896-1.499.865.537.867 1.463-.865v1.633h1v-1.633l1.467.869.533-.867-1.499-.869z"/></svg>';
                                 break;
                         }
-                        // start += '<svg class = "svgIcon" viewBox="0 0 454 366"><path fill="#12bcff"d="M340 110c-40 0-75-14-110-26-30-11-61-21-92-27-35-6-65 6-89 34a28 28 0 0 1-40 3C-3 83-3 66 8 54 53 1 110-9 174 7c36 9 71 25 106 36 19 5 39 10 58 11 27 2 48-13 65-33 12-13 29-15 41-5s13 28 1 41c-28 33-63 53-105 53zM120 312c-27-1-51 11-70 34-11 13-29 15-41 4-12-10-12-28-1-40 45-53 103-63 167-47 37 10 72 25 108 36 18 6 37 10 55 11 27 2 47-12 64-32 8-9 17-15 30-12 21 4 29 28 16 45-37 45-85 65-143 51-34-8-66-21-99-32-27-9-53-18-86-18zM123 128c42 1 81 15 120 29 26 9 52 18 79 24 28 6 53-3 74-24l11-11c11-11 27-11 39-1 10 10 11 26 1 38-35 43-81 64-137 52-34-7-67-20-100-32-29-10-59-20-91-19-28 1-51 13-69 34-12 13-29 15-41 4s-12-28 0-41c30-35 68-52 114-53z"/></svg>'
                         start += '<div class = "lowMin">' + Math.floor(data.main.temp_max) + '°/' + Math.floor(data.main.temp_min) + '°</div>'
 
                     start += '</div>';
                 start+= '</div>';    
 
-            // start += '<div><span class = "temp">' + Math.floor(data.main.temp) + '</span></div>';
             start += '</div>';
-            
-            
-            // $('.weatherDataContent').html('<div class = "weatherDataDiv"><h1 class = "cityName">' + city + '</h1>as of<span class = temp>' + Math.floor(data.main.temp) + '</span>'
-            // + '<p>' + data.coord.lon + ' - ' + data.coord.lat + '</p></div>');
+                
         })
         .then(data =>{
             var longitude = data.coord.lon;
@@ -155,8 +128,6 @@ $(function(){
 
                 
                 console.log(data2);
-                console.log(data2.daily[0].temp.min + ', max: ' + data2.daily[0].temp.max);
-                //calculate the average temperatures for morning, afternoon, evening, and overnight.
                 for(i = 0; i < 4; i++){
                     avgNighttemperature += data2.hourly[i].temp;
                 }
@@ -183,7 +154,6 @@ $(function(){
                 avgNighttemperature = avgNighttemperature / 7;
 
                 console.log(data2.hourly);
-                console.log(data2.hourly[8].weather[0].main);
                 start += '<div class = "forecast">';
                     start += '<header><h2>Today\'s Forecast for ' + data.name + '</h2></header>';
                     start += '<div class = "hourlyInfo1">'
@@ -385,7 +355,6 @@ $(function(){
                                 else{
 
                                     getDay.setDate(getDay.getDate() + 1);
-                                    console.log(getDay);
                                     let nextDay = getDay.toString().split(" ")[0] + " " + getDay.toString().split(" ")[2];
                                     start += '<li><div class = "hourlyForecastHolder">';
                                             start += '<h3><span>' + nextDay + '</span></h3><div><span>' + Math.floor(data2.daily[dailyDay].temp.max) + '°</span></div>';    
@@ -412,9 +381,6 @@ $(function(){
                 weatherDataContentText.html(start);
                 date = new Date(); 
 
-
-                // $('.addCities').css('display', 'block');
-
                 for(i = 0; i < cities.length; i++){
                     if(inputedCity == cities[i]){
                         $('#plus_Icon').css('backgroundColor', 'red');
@@ -436,7 +402,6 @@ $(function(){
             
         })
         .fail(function(){
-            console.log('failed to reach this area');
             $('.errorMessage').css('display', 'block');
             $('.weatherDataContent').css('display', 'none');
             
@@ -455,7 +420,6 @@ $(function(){
         avgEveningTemperature = 0;
         avgNighttemperature = 0;
 
-        // window.localStorage.setItem('searchedCity', city);
     }
 
 
@@ -466,17 +430,13 @@ $(function(){
         $('.sideMenuActive').css('transform', 'translateX(0)'); 
         if(cities.length > 0){
             $('.sideMenuActiveDiv header').children().replaceWith('<h5>Your Locations</h5>');
-            console.log('sfdfsfdsfsfdsfsdfdsfd');
             for(i = 0; i < cities.length; i++){
-                console.log(i);
                 $.get(`https://api.openweathermap.org/data/2.5/weather?q=${cities[i]}&units=${unitOfMeasurement}&appid=${apiKey}`, function(data, status){
                     console.log(data);
                 })
                 .done(function(data){
-                    console.log(cities[i]);
                     $('.savedCitiesSideMenu').append('<a href = "weatherapp.html"><li class = "sideMenuLi"><span class = "value">' + data.name + '</span><span> ' + Math.floor(data.main.temp) + '°</span></li></a>');
                     $(".sideMenuLi").on('click', function(){
-                        console.log($(this).children(".value").html());
                         window.localStorage.setItem("searchedCity", $(this).children(".value").html());
                     });
                 });
@@ -495,7 +455,6 @@ $(function(){
                         break;
                     }
                     else{
-                        console.log('are we getting here or are we being difficult like always?');
                         $("#add").css("display", "block");
                         $("#remove").css("display", "none");
                         
@@ -512,7 +471,6 @@ $(function(){
 
     $('#celsius').on('click', function(){
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius').css('color', 'cyan');
         $('#fahrenheit').css('color', 'white');
         getWeatherInfo();
@@ -521,7 +479,6 @@ $(function(){
 
     $('#fahrenheit').on('click', function(){
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit').css('color', 'cyan');
         $('#celsius').css('color', 'white');
         getWeatherInfo();
@@ -531,7 +488,6 @@ $(function(){
     $('#fahrenheit1').on('click', function(){
         window.localStorage.setItem('unit', 'imperial');
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit1').css('color', 'cyan');
         $('#celsius1').css('color', 'black');
         getWeatherInfo();
@@ -540,7 +496,6 @@ $(function(){
     $('#celsius1').on('click', function(){
         window.localStorage.setItem('unit', 'metric');
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius1').css('color', 'cyan');
         $('#fahrenheit1').css('color', 'black');
         getWeatherInfo();
@@ -568,7 +523,6 @@ $(function(){
         .done(function(data){
             $('.savedCitiesSideMenu').append('<a href = "weatherapp.html"><li class = "sideMenuLi"><span class = "value">' + data.name + '</span><span> ' + Math.floor(data.main.temp) + '°</span></li></a>');
             $(".sideMenuLi").on('click', function(){
-                console.log($(this).children(".value").html());
                 window.localStorage.setItem("searchedCity", $(this).children(".value").html());
             });
             $('#remove').css('display', 'block');
