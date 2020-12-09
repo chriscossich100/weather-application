@@ -26,7 +26,6 @@ $(function(){
 
     if("searchedCity" in localStorage){
         $('.quickNav').hide().slideDown();
-        // $('.quickNav').show(300);
     }
     else{
         $('.quickNav').hide();
@@ -37,24 +36,12 @@ $(function(){
         const apiKey = "your api key goes here";
         $.get(`https://api.openweathermap.org/data/2.5/weather?q=Leesburg&units=${unitOfMeasurement}&appid=${apiKey}`, function(data, status){
             console.log(data);
-            console.log(data.main.temp_max + ',' + data.main.temp_min);
 
             $('.cityName').html(data.name);
             var characterDate = date.toDateString();
             $('.asOfTime').html('as of ' + characterDate);
             $('.temp').html(Math.floor(data.main.temp) + '°');
             $('.weatherState').html(data.weather[0].main);
-            // start += '<div class = "weatherDataDiv"><h1 class = "cityName">' + city + '</h1>';
-            //     var characterDate = date.toDateString();
-            //     console.log(characterDate);
-            //     start += '<div class = "asOfTime" id = "asOfTime1">as of ' + characterDate + '</div>';
-            //     start += '<div class = "tempInfoData">';
-                    
-            //         start += '<div class = "tempandMainData"><span class = "temp">' + Math.floor(data.main.temp) + '°</span>';
-            //             start += '<div class = "weatherState">' + data.weather[0].main + '</div>';
-            //         start += '</div>';    
-                
-            //         start += '<div class = "iconandLowMin">';
 
             switch(data.weather[0].main){
                 case 'Sunny':
@@ -97,7 +84,6 @@ $(function(){
 
     $('#celsius').on('click', function(){
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius').css('color', 'cyan');
         $('#fahrenheit').css('color', 'white');
         getWeatherInfo();
@@ -105,7 +91,6 @@ $(function(){
 
     $('#fahrenheit').on('click', function(){
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit').css('color', 'cyan');
         $('#celsius').css('color', 'white');
         getWeatherInfo();

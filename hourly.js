@@ -28,7 +28,6 @@ $(function(){
     
 
     $('#fromHourly').on('submit', function(){
-        console.log('we got here soon');
         window.localStorage.setItem('searchedCity', $('#cityIdGetterFromHourly').val());
     })
     
@@ -49,7 +48,7 @@ $(function(){
             
             $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=${unitOfMeasurement}&appid=${apiKey}`, function(data2, status){
                 
-                console.log(data2.hourly);
+                console.log(data2.hourly); //good to see the output of the hourly weather.
                 let hour = newDate.getHours();
                 
 
@@ -84,7 +83,6 @@ $(function(){
                 for(i = 0; i < data2.hourly.length; i++){
 
                     
-                    console.log(hours2);
                     if((hours2 + i) <= 24){
                         if((hours2 + i) == 24){
                             hoursString = ((hours2 + i) - 12) + ' am';
@@ -121,7 +119,6 @@ $(function(){
                             hoursString = ((hours2 + i) - 36) + ' am';
                     
                             newDate.setDate(newDate.getDate() + 1 - 1);
-                            console.log(newDate.setDate(newDate.getDate() + 1));
                             eachDay = newDate.toString();
                             eachDay = eachDay.split(" ")[0] + " " + eachDay.split(" ")[1] + " " + eachDay.split(" ")[2] + " " + eachDay.split(" ")[3];
                             
@@ -191,11 +188,6 @@ $(function(){
                             break;
                     } 
 
-                    // let newDate = new Date();
-                    // let hour = newDate.getHours();
-                    
-                    
-                    
                     if(i == 0){
                         rnString += '<div class = "rnDate"><h3>' + characterDate + '</h3></div>';
                     }
@@ -290,7 +282,6 @@ $(function(){
 
     $('#celsius').on('click', function(){
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius').css('color', 'cyan');
         $('#fahrenheit').css('color', 'white');
         getHourlyWeatherInfo();
@@ -298,7 +289,6 @@ $(function(){
 
     $('#fahrenheit').on('click', function(){
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit').css('color', 'cyan');
         $('#celsius').css('color', 'white');
         getHourlyWeatherInfo();
@@ -312,7 +302,6 @@ $(function(){
     $('#fahrenheit3').on('click', function(){
         window.localStorage.setItem('unit', 'imperial');
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit3').css('color', 'cyan');
         $('#celsius3').css('color', 'black');
         getHourlyWeatherInfo();
@@ -321,7 +310,6 @@ $(function(){
     $('#celsius3').on('click', function(){
         window.localStorage.setItem('unit', 'metric');
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius3').css('color', 'cyan');
         $('#fahrenheit3').css('color', 'black');
         getHourlyWeatherInfo();

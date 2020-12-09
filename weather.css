@@ -1,19 +1,11 @@
 .container{
     
     margin: 60px auto 0 auto;
-    /* width: 100%; */
-    /* background-color: lawngreen; */
+
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around; 
 }
-
-/* .container{
-    
-    margin: 60px auto 0 auto;
-    width: 80%;
-    background-color: lawngreen;
-} */
 
 html{
     line-height: 1.5;
@@ -77,7 +69,6 @@ h3{
     display: flex;
     justify-content: flex-end;
     flex-flow: column;
-    /* background-color: gray; */
 }
 
 .unitChangeMobile{
@@ -87,7 +78,6 @@ h3{
     margin: 0;
     justify-content: space-between;
     background-color: white;
-    /* padding: 15px;; */
     padding: 0 15px;
 }
 
@@ -129,10 +119,7 @@ h3{
 }
 
 .mainHeader{
-    
-    /* display: flex;
-    justify-content: space-around; */
-    /* padding: 15px 15px 0 15px; */
+
     background-color: #05336b;
 }
 
@@ -148,7 +135,6 @@ h3{
 
 
 .searchFeature{
-    /* display: none; */
     
     position: relative;
     width: 40%;
@@ -160,7 +146,6 @@ h3{
     width: 100%;
     padding: .5rem;
     box-sizing: border-box;
-    /* background-color: #415991; */
     background-color: #375c89;
     color: white;
     
@@ -175,7 +160,6 @@ h3{
 
 
 .hamburgericon_and_unitChange{
-    /* background-color: brown; */
     color: white;
     text-align: center;
     display: flex;
@@ -184,7 +168,6 @@ h3{
 }
 
 .unitChange{
-    /* background-color: cornflowerblue; */
     width: 50%;
     margin: 0;
     
@@ -207,7 +190,6 @@ h3{
     letter-spacing: 0.1rem;
     color: white;
     text-decoration: none;
-    /* background-color: aqua; */
 }
 
 
@@ -216,15 +198,12 @@ h3{
     width: 20%;
     position: relative;
     margin: 0;
-    /* background-color: cyan; */
    
     cursor: pointer;
 }
 
 .quickNav{
-    /* background-color: red; */
     margin: 0;
-    /* display: none; */
 
 }
 
@@ -234,7 +213,6 @@ h3{
 }
 
 .forecastLinks{
-    /* background-color: chartreuse; */
     margin: 0 auto;
     display: flex;
     width: 70%;
@@ -246,7 +224,6 @@ h3{
 .forecastLinks a{
     text-decoration: none;
     padding: 10px;
-    /* background-color: chocolate; */
     color: white;
 }
 
@@ -256,25 +233,11 @@ h3{
 
 
 
-
-/* index content*/
-
-
-/* .mainContent{
-    background-color: #f3f3f3;
-    display: grid;
-    border-radius: 6px;
-    grid-template-columns: 70% auto;
-    padding: 10px;
-    width: 100%;
-} */
-
 .mainContent{
     background-color: #f3f3f3;
     display: flex;
     flex-flow: column;
     border-radius: 6px;
-    /* grid-template-columns: 70% auto; */
     padding: 10px;
     width: 100%;
 }
@@ -283,10 +246,6 @@ h3{
     display: none;
 }
 
-
-.snipping_image{
-    /* background-color: aqua; */
-}
 
 .snipping_image img{
     width: 100%;;
@@ -309,7 +268,6 @@ h3{
 
 
 .newsContent{
-    /* background-image: linear-gradient(#a88cc2,#e7cdc1,#fcf9f7); */
     background-color: #f3f3f3;
     background-size: cover;
     background-position: 50%;
@@ -332,13 +290,11 @@ h3{
 }
 
 .news1{
-    /* background-color: rgb(228, 228, 228); */
     flex-basis: 100%;
     border-bottom: 1px solid lightgray;
 }
 
 .news{
-    /* background-color:rgb(228, 228, 228); */
     flex-basis: 100%;
     margin-top: 10px;
     border-bottom: 1px solid lightgray;
@@ -356,7 +312,6 @@ h3{
 
 
 .moreNews{
-    /* background-color: teal; */
     margin-left: 0;
     margin-top: 15px;
     display: flex;
@@ -387,23 +342,13 @@ h3{
     
     background-color: aqua;
 }
-/*
-.snipping_image img{
-    width: 80%;
-}
-
- */
-
 
 .weatherDataContent{
     width: 95%;
-    /* background-color: red; */
-    /* margin-left: auto; */
     
 }
 
 .weatherDataDiv{
-    /* background-color: rgb(255, 174, 127); */
     background-image: -webkit-gradient(linear,left top,left bottom,from(#7ba5d9),to(#cecece));
     display: block;
     padding: 15px;
@@ -417,12 +362,10 @@ h3{
     font-weight: 600;
     font-size: 1.25rem;
     
-    /* background-color: mediumseagreen; */
     margin: 0;
 }
 
 .asOfTime{
-    /* background-color: blueviolet; */
     opacity: .65;
     font-size: 1.125rem
 }
@@ -442,7 +385,6 @@ h3{
     font-weight: 500;
     position: relative;
     display: block;
-    /* background-color: black; */
     text-align: left;
     line-height: .96em;
 }
@@ -451,7 +393,6 @@ h3{
     font-size: 1.7rem;
     font-weight: 700;
     color: white;
-    /* background-color: deepskyblue; */
 }
 
 .iconandLowMin{
@@ -459,7 +400,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* background-color: deeppink; */
+
 }
 
 .iconandLowMin svg{
@@ -467,7 +408,6 @@ h3{
     height: 100px;
     display: inline-block;
     position: relative;
-    /* background-color: dodgerblue; */
 }
 
 .lowMin{
@@ -480,8 +420,6 @@ h3{
 
 
 .forecast{
-    /* background-image: linear-gradient(#a88cc2,#e7cdc1,#fcf9f7); */
-    /* background-image: -webkit-gradient(linear,left top,left bottom,from(#7ba5d9),to(#969696)); */
     background-color: #f3f3f3;
     background-size: cover;
     background-position: 50%;
@@ -495,8 +433,6 @@ h3{
 
 .forecast header{
     
-    /* display: block; */
-    /* background-color: hotpink; */
     padding: 12px;
 }
 
@@ -518,7 +454,6 @@ h3{
     
     box-sizing: border-box;
     list-style-type: none;
-    /* background-color: indianred; */
 }
 
 .forecastTemps li{
@@ -533,8 +468,6 @@ h3{
 }
 
 .weatherDetails{
-    /* background-image: linear-gradient(#a88cc2,#e7cdc1,#fcf9f7); */
-    /* background-image: -webkit-gradient(linear,left top,left bottom,from(#7ba5d9),to(#969696)); */
     background-color: #f3f3f3;
     background-size: cover;
     background-position: 50%;
@@ -546,7 +479,6 @@ h3{
 }
 .weatherDetails header{
     padding: 12px;
-    /* background-color: lightblue; */
 }
 
 .weatherDetails h2{
@@ -564,11 +496,9 @@ h3{
     position: relative;
     display: block;
     font-weight: 600;
-    /* background-color: lightpink; */
 }
 
 .feelsLikeText{
-    /* background-color: rgb(0, 205, 92); */
     margin: 0 0 0 12px;
     
 }
@@ -576,14 +506,11 @@ h3{
 .details{
     display: flex;
     margin-top: 10px;
-    /* flex-wrap: nowrap; */
     flex-flow: wrap;
     padding: 10px;
-    /* background-color: palegoldenrod; */
 } 
 
 .leftDetails{
-    /* background-color: mediumseagreen; */
     flex-basis: 100%;
     display: flex!important;
     
@@ -593,8 +520,6 @@ h3{
 }
 
 .leftDescription{
-    /* padding: 0 10px; */
-    /* background-color: mediumvioletred; */
     font-size: 1rem;
     font-weight: 400;
     min-width: 30%;
@@ -603,23 +528,17 @@ h3{
 
 .leftApiData{
     text-align: right;
-    /* background-color: orangered; */
     
 }
 
 .rightDetails{
-    /* background-color: mediumturquoise; */
     flex-basis: 100%;
     display: flex!important;
-    /* margin-left: 1%; */
     border-top: 1px solid #c2c2c2!important;
-    /* padding: 10px 1%; */
     padding: 10px 0;
 }
 
 .rightDescription{
-    /* padding: 0 10px; */
-    /* background-color: rgb(21, 199, 110); */
     font-size: 1rem;
     font-weight: 400;
     min-width: 30%;
@@ -628,13 +547,11 @@ h3{
 
 .rightApiData{
     text-align: right;
-    /* background-color: orchid; */
 }
 
 
 
 .hourlyDetails{
-    /* background-image: linear-gradient(#a88cc2,#e7cdc1,#fcf9f7); */
     background-color: #f3f3f3;
     background-size: cover;
     background-position: 50%;
@@ -646,7 +563,6 @@ h3{
 
 
 .hourlyDetails header{
-    /* background-color: palegreen; */
     padding: 12px;
 }
 
@@ -658,21 +574,18 @@ h3{
 
 .hourlyInfo{
     line-height: 1.5;
-    /* background-color: red; */
     padding-bottom: 23px;
    
 }
 
 .hourlyInfo1{
     line-height: 1.5;
-    /* background-color: red; */
     padding-bottom: 23px;
    
 }
 
 
 .hourlyInfo1 ul{
-    /* background-color: lawngreen; */
     padding: 0 8px;
     display: flex;
     list-style-type: none;
@@ -684,7 +597,6 @@ h3{
 .hourlyInfo1 ul li{
     border-width: 0 1px 0 0;
     padding: 0 5px;
-    /* background-color: lightcoral; */
     border-style: solid;
     border-image: linear-gradient(180deg,hsla(0,0%,87.1%,0) 0,#dedede 25%,#dedede 70%,hsla(0,0%,87.1%,0) 85%,hsla(0,0%,87.1%,0)) 1 100%;
     display: flex;
@@ -694,7 +606,6 @@ h3{
 
 .hourlyForecastHolder1{
     width: 80%;
-    /* background-color: blue; */
     cursor: pointer;
     align-items: center;
     justify-content: flex-end;
@@ -703,15 +614,13 @@ h3{
 
 .hourlyForecastHolder1 svg{
     margin-top: 10px;
-    /* width: 50%;
-    margin-left: 25%;; */
+
     
 }
 
 
 .hourlyInfo1 ul li h3{
     font-weight: 700;
-    /* background-color: yellow; */
     text-align: center;
     width: 100%;
     font-size: .875rem;
@@ -723,7 +632,6 @@ h3{
     font-weight: 700;
     font-size: 1.25rem;
     color: #1b4de4;
-    /* background-color: tomato; */
     line-height: .83em;
     text-align: center;
 }
@@ -731,7 +639,6 @@ h3{
 
 
 .hourlyInfo ul{
-    /* background-color: lawngreen; */
     padding: 0 8px;
     display: flex;
     list-style-type: none;
@@ -743,7 +650,6 @@ h3{
 .hourlyInfo ul li{
     border-width: 0 1px 0 0;
     padding: 0 5px;
-    /* background-color: lightcoral; */
     border-style: solid;
     border-image: linear-gradient(180deg,hsla(0,0%,87.1%,0) 0,#dedede 25%,#dedede 70%,hsla(0,0%,87.1%,0) 85%,hsla(0,0%,87.1%,0)) 1 100%;
     display: flex;
@@ -757,7 +663,6 @@ h3{
 
 .hourlyForecastHolder{
     
-    /* background-color: cyan; */
     width: 80%;
     cursor: pointer;
     align-items: center;
@@ -767,7 +672,6 @@ h3{
 
 .hourlyInfo ul li h3{
     font-weight: 700;
-    /* background-color: yellow; */
     text-align: center;
     font-size: .875rem;
     padding-bottom: 5px;
@@ -778,7 +682,6 @@ h3{
     font-weight: 700;
     font-size: 1.25rem;
     color: #1b4de4;
-    /* background-color: tomato; */
     line-height: .83em;
     text-align: center;
 }
@@ -789,7 +692,6 @@ h3{
 }
 
 .moreHours{
-    /* background-color: teal; */
     padding: 0 16px 8px 11px;
     display: flex;
     flex-flow: row nowrap;
@@ -818,7 +720,6 @@ h3{
 
 
 .dailyDetails{
-    /* background-image: linear-gradient(#a88cc2,#e7cdc1,#fcf9f7); */
     background-color: #f3f3f3;
     background-size: cover;
     background-position: 50%;
@@ -839,7 +740,6 @@ h3{
 
 .dailyInfo{
     line-height: 1.5;
-    /* background-color: red; */
     padding: 0 13px;
     display: flex;
     
@@ -850,7 +750,6 @@ h3{
     flex-basis: 20%;
     flex-flow: column;
     text-align: center;
-    /* background-color: lightskyblue; */
     border-right: 1px solid #dedede;
 }
 
@@ -858,7 +757,6 @@ h3{
     font-weight: 700;
     font-size: 1.25rem;
     color: #1b4de4;
-    /* background-color: tomato; */
     line-height: .83em;
     text-align: center;
 }
@@ -871,7 +769,6 @@ h3{
 
 
 .dailyInfo ul{
-    /* background-color: lawngreen; */
     padding: 0 8px;
     display: flex;
     list-style-type: none;
@@ -883,7 +780,6 @@ h3{
 .dailyInfo ul li{
     border-width: 0 1px 0 0;
     padding: 0 5px;
-    /* background-color: lightcoral; */
     border-style: solid;
     border-image: linear-gradient(180deg,hsla(0,0%,87.1%,0) 0,#dedede 25%,#dedede 70%,hsla(0,0%,87.1%,0) 85%,hsla(0,0%,87.1%,0)) 1 100%;
     display: flex;
@@ -917,7 +813,6 @@ h3{
 
 .dailyInfo ul li h3{
     font-weight: 700;
-    /* background-color: yellow; */
     text-align: center;
     font-size: 1.125rem;
     padding-bottom: 5px;
@@ -929,7 +824,6 @@ h3{
     font-weight: 700;
     font-size: 2.25rem;
     color: #1b4de4;
-    /* background-color: tomato; */
     line-height: .83em;
     text-align: center;
 }
@@ -937,7 +831,6 @@ h3{
 
 
 .moreDays{
-    /* background-color: teal; */
     padding: 0 16px 8px 11px;
     display: flex;
     flex-flow: row nowrap;
@@ -963,16 +856,7 @@ h3{
 }
 
 
-
-/* .storedCities{
-    width: 50%;
-    background-color: aquamarine;
-   float: left;
-} */
-
-
 .addCities{
-    /* background-color: yellow;  */
     width: 10%;
     padding: 5px;
     margin-right: auto; 
@@ -1037,7 +921,6 @@ h3{
         color: white;
         text-decoration: none;
         
-        /* background-color: aqua; */
     }
 
     .inputCity{
@@ -1045,7 +928,6 @@ h3{
         width: 100%;
         padding: .5rem;
         box-sizing: border-box;
-        /* background-color: #415991; */
         background-color: #375c89;
         color: white;
         
@@ -1056,7 +938,6 @@ h3{
 
 
     .hamburgericon_and_unitChange{
-        /* background-color: brown; */
         color: white;
         text-align: center;
         display: flex;

@@ -22,7 +22,6 @@ $(function(){
     }
     let rnString = "";
     let theMainString = $(".rnDailyWeather");
-    let closeDetails = false;
     let newDate = new Date();
 
     if(window.localStorage.getItem('searchedCity')){
@@ -44,7 +43,7 @@ $(function(){
     
             $.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=${unitOfMeasurement}&appid=${apiKey}`, function(data2, status){
     
-                console.log(data2);
+                console.log(data2); //this is good to see the data that has been retrieved from the get request.
     
     
                 let hour = newDate.getHours();
@@ -72,11 +71,7 @@ $(function(){
     
                 rnString += '<h1><strong>7 Day Weather</strong><span id = "cityforH1"> - ' + cityQuickData.name +'</span></h1>';
                 rnString += '<p class = "asofPHourly">as of: ' + hour + '</p>';
-    
-    
-                let hours2 = newDate.getHours();
-                let hoursString = '12';
-                let characterDate = newDate.toDateString();
+
                 let eachDay;
                 let toggleSwitch = 'toggle';
     
@@ -220,7 +215,6 @@ $(function(){
                 function openDetails(){
     
                     if($(this).next().css('display') == 'none'){
-                        console.log('why is this not working again');
                         $(this).next().css('display', 'flex');
                         $(this).prev().children().css('display', 'none');
                         $(this).children()
@@ -228,7 +222,6 @@ $(function(){
                     }
                     else{
                         
-                        console.log('why is this not working'); 
                         $(this).next().css('display', 'none');
                         $(this).prev().children().css('display', 'block');
                         $(this).children()
@@ -249,7 +242,6 @@ $(function(){
 
     $('#celsius').on('click', function(){
         unitOfMeasurement = 'metric';
-        console.log('unit of measurement has been changed to metric');
         $('#celsius').css('color', 'cyan');
         $('#fahrenheit').css('color', 'white');
         getWeatherInfo();
@@ -257,7 +249,6 @@ $(function(){
 
     $('#fahrenheit').on('click', function(){
         unitOfMeasurement = 'imperial';
-        console.log('unit of measurement has been changed to imperial');
         $('#fahrenheit').css('color', 'cyan');
         $('#celsius').css('color', 'white');
         getWeatherInfo();
