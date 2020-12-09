@@ -1,13 +1,13 @@
 
 
 $(function(){
-    let apiKey = "your api key goes here";
 
 
     //this is to make sure that the user has actually searched for a city. If the user has not searched for a city at all and tries to access this page, then it will redirect them 
     //to the home page.
     if("searchedCity" in localStorage){
         let dailyCity;
+        let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
         let long;
         let lat; 
         let unitOfMeasurement;
