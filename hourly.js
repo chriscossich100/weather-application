@@ -318,7 +318,7 @@ $(function(){
 
     }
     else{
-        window.location.replace("home.html");
+        window.location.replace("index.html");
     }
 
 });
