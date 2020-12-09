@@ -7,7 +7,7 @@ $(function(){
     //to the home page.
     if("searchedCity" in localStorage){
         let dailyCity;
-        let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
+        let apiKey = "YOUR API KEY HERE";
         let long;
         let lat; 
         let unitOfMeasurement;

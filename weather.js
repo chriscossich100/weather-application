@@ -20,7 +20,7 @@ $(function(){
         unitOfMeasurement = 'metric';  
     }
     
-    const apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
+    const apiKey = "YOUR API KEY HERE";
     var weatherDataContentText = $('.weatherDataContent');
     var inputedCity = '';
     let city;
