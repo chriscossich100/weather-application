@@ -2,6 +2,7 @@
 
 Welcome to my simple weather page. This weather page/wesbite was built using Javascript and Jquery. I decided to create this project as a way to demenstrate my skills as a front end developer and to show my knowledge using javascript,jquery, and RESTful APIs. This simple project displays multiple type of forecasts. These are: Todays, 48 hours, and 7 day forecast for the city searched. As of right now, there is no specific filter for multiple cities with the same name. It goes off by whatever the weather api goes with. This is something I plan on working on soon. I also plan on adding a longitude and latitude filter which will also help out getting the exact city you need. For cities with unique names (no other city with the same name), it should work just fine. 
 
+### This site is being hosted on [Amazon S3](http://cossich-weatherapp.s3-website-us-east-1.amazonaws.com/)
 
 
 _How it Works_
