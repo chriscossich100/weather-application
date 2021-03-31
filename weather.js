@@ -60,7 +60,6 @@ $(function(){
 
 
         if(window.localStorage.getItem('searchedCity') && !$('#cityIdGetter').val()){
-            console.log('booga woooga toooga')
             city = window.localStorage.getItem('searchedCity');
         }
         else{
