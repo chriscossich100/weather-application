@@ -1,8 +1,18 @@
 $(function(){
 
+
+
+    
+    
        
     $(document).ready(getLocation);
-
+    
+    if("searchedCity" in localStorage){
+        $('.quickNav').hide().slideDown();
+    }
+    else{
+        $('.quickNav').hide();
+    }
 
     let unitOfMeasurement;
     if("unit" in localStorage){
@@ -24,16 +34,11 @@ $(function(){
         window.localStorage.setItem('searchedCity', $('#cityIdGetter').val());
     });
 
-    if("searchedCity" in localStorage){
-        $('.quickNav').hide().slideDown();
-    }
-    else{
-        $('.quickNav').hide();
-    }
+    
 
     function getLocation(){
         var date = new Date();
-        const apiKey = "YOUR API KEY HERE";
+        const apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
         $.get(`https://api.openweathermap.org/data/2.5/weather?q=Leesburg&units=${unitOfMeasurement}&appid=${apiKey}`, function(data, status){
             console.log(data);
 
@@ -80,21 +85,6 @@ $(function(){
           
         });
     };
-
-
-    $('#celsius').on('click', function(){
-        unitOfMeasurement = 'metric';
-        $('#celsius').css('color', 'cyan');
-        $('#fahrenheit').css('color', 'white');
-        getWeatherInfo();
-    });
-
-    $('#fahrenheit').on('click', function(){
-        unitOfMeasurement = 'imperial';
-        $('#fahrenheit').css('color', 'cyan');
-        $('#celsius').css('color', 'white');
-        getWeatherInfo();
-    });
 
 
     $('#fahrenheit1').on('click', function(){

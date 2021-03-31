@@ -7,7 +7,7 @@ $(function(){
     //to the home page.
     if("searchedCity" in localStorage){
         let dailyCity;
-        let apiKey = "YOUR API KEY HERE";
+        let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
         let long;
         let lat; 
         let unitOfMeasurement;
@@ -244,21 +244,6 @@ $(function(){
                 });
             }); 
         }
-
-        $('#celsius').on('click', function(){
-            unitOfMeasurement = 'metric';
-            $('#celsius').css('color', 'cyan');
-            $('#fahrenheit').css('color', 'white');
-            getWeatherInfo();
-        });
-
-        $('#fahrenheit').on('click', function(){
-            unitOfMeasurement = 'imperial';
-            $('#fahrenheit').css('color', 'cyan');
-            $('#celsius').css('color', 'white');
-            getWeatherInfo();
-        });
-
 
         $('#fahrenheit1').on('click', function(){
             unitOfMeasurement = 'imperial';

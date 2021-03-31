@@ -6,7 +6,6 @@
     flex-flow: column;
 }
 
-
 .rnHourlyWeather h1{
     margin: 0;
     font-weight: 400;
@@ -75,10 +74,14 @@
 
 
 .rnOtherDiv{
-    border-bottom: 1px solid #dedede!important;
+    border-bottom: 1px solid #dedede;
     padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 15px;
+}
+
+.rnOtherDiv:nth-last-child(1){
+    border-bottom: 0px;
 }
 
 .rnOtherInfo{

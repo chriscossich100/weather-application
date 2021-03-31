@@ -25,10 +25,14 @@
 .eachDayDiv{
     display: flex;
     flex-flow: wrap;
-    border-bottom: 2px solid #dedede!important;
+    border-bottom: 2px solid #dedede;
     padding-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.eachDayDiv:nth-last-child(1){
+    border-bottom: 0px;
 }
 
 .rnWeatherInfo{

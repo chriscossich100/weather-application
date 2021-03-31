@@ -4,7 +4,7 @@ $(function(){
     //to the home page.
     if("searchedCity" in localStorage){
         let hourlyCity;
-        let apiKey = "YOUR API KEY HERE";
+        let apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
         let long;
         let lat; 
         let unitOfMeasurement;
@@ -300,7 +300,7 @@ $(function(){
         //IN ORDER TO AVOID THIS UNNECESSARY ACTION, WE NAMED IT TO '#fahrenheit3' . THIS MEANS THAT NO GET REQUEST IN THE WEATHERAPP.HTML WILL RUN. JUST THE getHourlyWeatherInfo().
         //**** THIS DOESNT CAUSE ANY ERRORS, BUT COULD POTENTIALLY SLOW DOWN THE PAGE. HOWEVER, ITS NOT DRASTIC AND IS ALMOST UNNOTICABLE. WILL BE FIXED LATER ON FOR THE OTHER PAGES.
 
-        $('#fahrenheit3').on('click', function(){
+        $('#fahrenheit1').on('click', function(){
             window.localStorage.setItem('unit', 'imperial');
             unitOfMeasurement = 'imperial';
             $('#fahrenheit3').css('color', 'cyan');
@@ -308,7 +308,7 @@ $(function(){
             getHourlyWeatherInfo();
         });
 
-        $('#celsius3').on('click', function(){
+        $('#celsius1').on('click', function(){
             window.localStorage.setItem('unit', 'metric');
             unitOfMeasurement = 'metric';
             $('#celsius3').css('color', 'cyan');

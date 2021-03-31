@@ -20,7 +20,7 @@ $(function(){
         unitOfMeasurement = 'metric';  
     }
     
-    const apiKey = "YOUR API KEY HERE";
+    const apiKey = "48ef76dd06c684c6abd02d37d95a18b1";
     var weatherDataContentText = $('.weatherDataContent');
     var inputedCity = '';
     let city;
@@ -60,11 +60,12 @@ $(function(){
 
 
         if(window.localStorage.getItem('searchedCity') && !$('#cityIdGetter').val()){
+            console.log('booga woooga toooga')
             city = window.localStorage.getItem('searchedCity');
         }
         else{
             city = $('#cityIdGetter').val();
-            
+            window.localStorage.setItem('searchedCity', city);
         }
 
 
@@ -73,6 +74,7 @@ $(function(){
 
                 
             console.log(data);
+            $('.quickNav').hide().slideDown();
 
             start += '<div class = "weatherDataDiv"><h1 class = "cityName">' + data.name + '</h1>';
                 var characterDate = date.toDateString();
@@ -403,11 +405,10 @@ $(function(){
         })
         .fail(function(){
             $('.errorMessage').css('display', 'block');
+            console.log('failed to find the city you searched for');
             $('.weatherDataContent').css('display', 'none');
-            
-            $('#add').css('display', 'none');
-            $('#remove').css('display', 'none');
             addorremoveError = true;
+            $('.quickNav').hide()
             
         });
         
@@ -465,25 +466,18 @@ $(function(){
                 $("#add").css("display", "block");
                 $("#remove").css("display", "none");
             }
+
+            if(addorremoveError){
+                $("#add").css("display", "none");
+                $("#remove").css("display", "none");
+            }
+        }
+        else{
+            $("#add").css("display", "none");
+            $("#remove").css("display", "none");
         }
 
     });
-
-    $('#celsius').on('click', function(){
-        unitOfMeasurement = 'metric';
-        $('#celsius').css('color', 'cyan');
-        $('#fahrenheit').css('color', 'white');
-        getWeatherInfo();
-    });
-
-
-    $('#fahrenheit').on('click', function(){
-        unitOfMeasurement = 'imperial';
-        $('#fahrenheit').css('color', 'cyan');
-        $('#celsius').css('color', 'white');
-        getWeatherInfo();
-    });
-
 
     $('#fahrenheit1').on('click', function(){
         window.localStorage.setItem('unit', 'imperial');
